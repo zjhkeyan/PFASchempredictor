@@ -1,0 +1,16 @@
+Official model page:
+https://huggingface.co/Prior-Labs/tabpfn_3_5
+
+Direct checkpoint download:
+https://huggingface.co/Prior-Labs/tabpfn_3_5/resolve/main/tabpfn-v3.5-20260909.safetensors
+
+License:
+https://huggingface.co/Prior-Labs/tabpfn_3_5/blob/main/LICENSE
+
+Expected local filename:
+models/tabpfn-v3.5-20260909.safetensors
+
+SHA256:
+ece4d67eadfea42eb0e610df5189bea60cb7f31073d81e9c7a019b76eacf0be3
+
+Access requires accepting the model terms and authenticating to Hugging Face.

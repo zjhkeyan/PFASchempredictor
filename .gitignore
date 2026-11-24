@@ -1,0 +1,26 @@
+# Downloaded model weights (fetch via ./download_tabpfn35_weight.sh)
+models/*.safetensors
+models/*.pt
+models/*.ckpt
+
+# Experiment outputs & logs
+runs/
+code/pfas_qsar_minchange_code/runs/
+*.log
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# OS & editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

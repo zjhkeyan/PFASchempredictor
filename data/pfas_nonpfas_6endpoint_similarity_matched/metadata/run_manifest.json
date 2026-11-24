@@ -1,0 +1,169 @@
+{
+  "runner": "/autodl-fs/data/migrated_from_autodl_tmp/cleanup_20260531/JCIMpaper/17049957/pfas_nonpfas_structural_similarity_20261026/r2_lower_tail_10pct/build_dataset.py",
+  "runner_sha256": "a7a5339340942ddee2f5955c9c386095d38ecfaae7039baf2f39dc2c31f5607b",
+  "sources": {
+    "/root/autodl-tmp/JCIMpaper/17049957/paper_extracted/current_dataset_distribution_20260827/outputs/current_pfas_6endpoint_distribution_input.csv": {
+      "sha256": "00b5262273c044c1480cd5617c933ed92bcc979d364987b4c5ad5b38b9987dad",
+      "bytes": 98235
+    },
+    "/root/autodl-tmp/JCIMpaper/17049957/Excel summaries/Global models just PFAS/EST_PFAS_supplementary_structure_endpoint_records_444.csv": {
+      "sha256": "df0ee7757e764219ae17cd7b722322d955b8156cb0e49143b4f0bcd791c27341",
+      "bytes": 163368
+    },
+    "/root/autodl-tmp/JCIMpaper/Predictors-for-15-Environmental-Endpoints/pfas_qsar_minchange_code/pfas_qsar_minchange_code/runs/oecd2021_pfas_definition_audit_20260616/six_endpoint_oecd2021_annotated_long.csv": {
+      "sha256": "abcf94dc75a36d0962f6464dae014fc86d7d00f770d3f3cce97b3d831eaa1972",
+      "bytes": 4409164
+    }
+  },
+  "similarity": {
+    "fingerprint": "Morgan",
+    "radius": 2,
+    "n_bits": 2048,
+    "metric": "Tanimoto",
+    "primary_rank": "maximum similarity to any same-endpoint PFAS",
+    "tie_breaker": "mean of top-3 PFAS similarities",
+    "lower_tail_fraction": 0.1,
+    "lower_tail_span": 0.2,
+    "selection_policy": "top 90% by maximum similarity plus evenly spaced ranks from the next lower-similarity band"
+  },
+  "pfas_target_counts": {
+    "WS": 270,
+    "LogKow": 519,
+    "HLC": 102,
+    "VP": 194,
+    "BP": 481,
+    "MP": 1218
+  },
+  "nonpfas_target_counts": {
+    "WS": 1786,
+    "LogKow": 2554,
+    "HLC": 2495,
+    "VP": 2717,
+    "BP": 1763,
+    "MP": 2949
+  },
+  "pfas_build_audit": [
+    {
+      "property": "WS",
+      "target_pfas": 270,
+      "base_pfas": 269,
+      "supplement_added": 1,
+      "candidate_pool": 15,
+      "selection_rule": "highest maximum Morgan radius-2/2048 Tanimoto similarity to same-endpoint base PFAS; top-3 mean is the tie-breaker"
+    },
+    {
+      "property": "LogKow",
+      "target_pfas": 519,
+      "base_pfas": 519,
+      "supplement_added": 0,
+      "candidate_pool": 0,
+      "selection_rule": "none required"
+    },
+    {
+      "property": "HLC",
+      "target_pfas": 102,
+      "base_pfas": 88,
+      "supplement_added": 14,
+      "candidate_pool": 14,
+      "selection_rule": "highest maximum Morgan radius-2/2048 Tanimoto similarity to same-endpoint base PFAS; top-3 mean is the tie-breaker"
+    },
+    {
+      "property": "VP",
+      "target_pfas": 194,
+      "base_pfas": 194,
+      "supplement_added": 0,
+      "candidate_pool": 0,
+      "selection_rule": "none required"
+    },
+    {
+      "property": "BP",
+      "target_pfas": 481,
+      "base_pfas": 480,
+      "supplement_added": 1,
+      "candidate_pool": 76,
+      "selection_rule": "highest maximum Morgan radius-2/2048 Tanimoto similarity to same-endpoint base PFAS; top-3 mean is the tie-breaker"
+    },
+    {
+      "property": "MP",
+      "target_pfas": 1218,
+      "base_pfas": 1217,
+      "supplement_added": 1,
+      "candidate_pool": 67,
+      "selection_rule": "highest maximum Morgan radius-2/2048 Tanimoto similarity to same-endpoint base PFAS; top-3 mean is the tie-breaker"
+    }
+  ],
+  "nonpfas_selection_audit": [
+    {
+      "property": "WS",
+      "target_nonpfas": 1786,
+      "candidate_pool": 9061,
+      "selected": 1786,
+      "top_core_selected": 1607,
+      "lower_tail_selected": 179,
+      "min_selected_similarity": 0.28125,
+      "median_selected_similarity": 0.35185185185185186,
+      "max_selected_similarity": 0.8421052631578947,
+      "next_unselected_similarity": 0.29508196721311475
+    },
+    {
+      "property": "LogKow",
+      "target_nonpfas": 2554,
+      "candidate_pool": 15033,
+      "selected": 2554,
+      "top_core_selected": 2299,
+      "lower_tail_selected": 255,
+      "min_selected_similarity": 0.37254901960784315,
+      "median_selected_similarity": 0.5,
+      "max_selected_similarity": 0.8421052631578947,
+      "next_unselected_similarity": 0.4
+    },
+    {
+      "property": "HLC",
+      "target_nonpfas": 2495,
+      "candidate_pool": 3480,
+      "selected": 2495,
+      "top_core_selected": 2245,
+      "lower_tail_selected": 250,
+      "min_selected_similarity": 0.13043478260869565,
+      "median_selected_similarity": 0.1956521739130435,
+      "max_selected_similarity": 0.8421052631578947,
+      "next_unselected_similarity": 0.14814814814814814
+    },
+    {
+      "property": "VP",
+      "target_nonpfas": 2717,
+      "candidate_pool": 3188,
+      "selected": 2717,
+      "top_core_selected": 2445,
+      "lower_tail_selected": 272,
+      "min_selected_similarity": 0.03278688524590164,
+      "median_selected_similarity": 0.21568627450980393,
+      "max_selected_similarity": 0.8421052631578947,
+      "next_unselected_similarity": 0.13846153846153847
+    },
+    {
+      "property": "BP",
+      "target_nonpfas": 1763,
+      "candidate_pool": 6350,
+      "selected": 1763,
+      "top_core_selected": 1587,
+      "lower_tail_selected": 176,
+      "min_selected_similarity": 0.2972972972972973,
+      "median_selected_similarity": 0.38235294117647056,
+      "max_selected_similarity": 0.6666666666666666,
+      "next_unselected_similarity": 0.3181818181818182
+    },
+    {
+      "property": "MP",
+      "target_nonpfas": 2949,
+      "candidate_pool": 27836,
+      "selected": 2949,
+      "top_core_selected": 2654,
+      "lower_tail_selected": 295,
+      "min_selected_similarity": 0.4523809523809524,
+      "median_selected_similarity": 0.5294117647058824,
+      "max_selected_similarity": 0.8421052631578947,
+      "next_unselected_similarity": 0.47058823529411764
+    }
+  ]
+}
